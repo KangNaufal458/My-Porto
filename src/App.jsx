@@ -98,7 +98,7 @@ const App = () => {
           >
             <motion.span variants={fadeIn} className="hero-greeting">Hi, Saya Naufal 👋</motion.span>
             <motion.h1 variants={fadeIn} className="hero-title">
-              Bukan Cuma Nulis Kode, Tapi <span className="gradient-text">Membawa Dampak Nyata</span>
+              Aku ingin melihat senyuman semua orang <span className="gradient-text">Karena itu, aku ingin terus bertarung!"</span>
             </motion.h1>
             <motion.p variants={fadeIn} className="hero-description">
               Halo semuanya, perkenalkan saya Naufal Zanuwar Sudarto, saya adalah mahasiswa Teknik Informatika dari kampus STMIK AMIKOM SURAKARTA yang berfokus pada front-end development dan web developer. Selain itu, saya juga memiliki sedikit skill multimedia di bidang editing video dan desain grafis karena di SMK saya mengambil jurusan Multimedia.
