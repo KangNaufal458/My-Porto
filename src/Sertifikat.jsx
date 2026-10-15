@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Award, Globe, Flag, Eye, X, ExternalLink, Sparkles, Trophy } from 'lucide-react';
 import certCodeLab from './assets/Sertif CodeLab.jpg';
 import certProxoCORIS from './assets/Sertif ProxoCORIS.jpg';
+import certMicrosoftOffice from './assets/26OL00521_NAUFAL ZANUWAR SUDARTO_page-0001.jpg';
 import './Sertifikat.css';
 
 const certificatesData = [
@@ -16,6 +17,17 @@ const certificatesData = [
     description: 'Sertifikat pencapaian resmi pada ajang kompetisi teknologi dan sistem informasi tingkat Internasional (ProxoCORIS). Membuktikan kompetensi dan daya saing di kancah global.',
     image: certProxoCORIS,
     year: '2024'
+  },
+  {
+    id: 'microsoft-office',
+    title: 'Sertifikasi Applied Microsoft Office',
+    level: 'internasional',
+    levelLabel: 'Taraf Internasional',
+    issuer: 'Trust Training Partners (Microsoft Learning Partner) & STMIK AMIKOM Surakarta',
+    category: 'Produktivitas & Office',
+    description: 'Sertifikat kelulusan Accelerated Competency Training and Certification (ACTION) Program dalam bidang Applied Microsoft Office dengan standar resmi Microsoft Learning Partner bekerja sama dengan STMIK AMIKOM Surakarta.',
+    image: certMicrosoftOffice,
+    year: '2026'
   },
   {
     id: 'codelab',
@@ -218,6 +230,12 @@ const Certificates = () => {
                   </div>
 
                   <p className="modal-desc">{selectedCert.description}</p>
+
+                  <div style={{ display: 'flex', gap: '1.25rem', flexWrap: 'wrap', marginBottom: '1.75rem', color: '#94a3b8', fontSize: '0.9rem', borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '1rem' }}>
+                    {selectedCert.issuer && <div><span style={{ color: '#64748b' }}>Penerbit: </span><span style={{ color: '#e2e8f0', fontWeight: 500 }}>{selectedCert.issuer}</span></div>}
+                    {selectedCert.year && <div><span style={{ color: '#64748b' }}>Tahun: </span><span style={{ color: '#e2e8f0', fontWeight: 500 }}>{selectedCert.year}</span></div>}
+                    {selectedCert.category && <div><span style={{ color: '#64748b' }}>Kategori: </span><span style={{ color: '#e2e8f0', fontWeight: 500 }}>{selectedCert.category}</span></div>}
+                  </div>
 
                   <div className="modal-actions">
                     <a 
