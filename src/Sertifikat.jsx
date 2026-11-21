@@ -4,9 +4,23 @@ import { Award, Globe, Flag, Eye, X, ExternalLink, Sparkles, Trophy } from 'luci
 import certCodeLab from './assets/Sertif CodeLab.jpg';
 import certProxoCORIS from './assets/Sertif ProxoCORIS.jpg';
 import certMicrosoftOffice from './assets/26OL00521_NAUFAL ZANUWAR SUDARTO_page-0001.jpg';
+import certNvidiaNlp from './assets/NVIDIA CERTIFIET NAUFAL ZS_page-0001.jpg';
 import './Sertifikat.css';
 
 const certificatesData = [
+  {
+    id: 'nvidia-nlp',
+    title: 'Sertifikasi NVIDIA: Building Transformer-Based NLP Applications',
+    level: 'internasional',
+    levelLabel: 'Taraf Internasional',
+    issuer: 'NVIDIA',
+    category: 'AI & Natural Language Processing',
+    description: 'Certificate of Competency dari NVIDIA dalam menyelesaikan pelatihan Building Transformer-Based Natural Language Processing Applications. Membuktikan kompetensi dalam membangun dan menerapkan aplikasi pemrosesan bahasa alami berbasis arsitektur Transformer.',
+    image: certNvidiaNlp,
+    year: '2026',
+    credentialId: 's9Ovns_RR5asBjjT0wmeIQ',
+    credentialUrl: 'https://learn.nvidia.com/certificates?id=s9Ovns_RR5asBjjT0wmeIQ'
+  },
   {
     id: 'proxocoris',
     title: 'Sertifikat Kompetisi ProxoCORIS',
@@ -235,6 +249,7 @@ const Certificates = () => {
                     {selectedCert.issuer && <div><span style={{ color: '#64748b' }}>Penerbit: </span><span style={{ color: '#e2e8f0', fontWeight: 500 }}>{selectedCert.issuer}</span></div>}
                     {selectedCert.year && <div><span style={{ color: '#64748b' }}>Tahun: </span><span style={{ color: '#e2e8f0', fontWeight: 500 }}>{selectedCert.year}</span></div>}
                     {selectedCert.category && <div><span style={{ color: '#64748b' }}>Kategori: </span><span style={{ color: '#e2e8f0', fontWeight: 500 }}>{selectedCert.category}</span></div>}
+                    {selectedCert.credentialId && <div><span style={{ color: '#64748b' }}>ID Sertifikasi: </span><span style={{ color: '#e2e8f0', fontWeight: 500 }}>{selectedCert.credentialId}</span></div>}
                   </div>
 
                   <div className="modal-actions">
@@ -246,6 +261,16 @@ const Certificates = () => {
                     >
                       <ExternalLink size={18} /> Buka Ukuran Penuh
                     </a>
+                    {selectedCert.credentialUrl && (
+                      <a
+                        href={selectedCert.credentialUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-outline"
+                      >
+                        <Award size={18} /> Verifikasi Sertifikat
+                      </a>
+                    )}
                     <button 
                       className="btn btn-outline"
                       onClick={() => setSelectedCert(null)}
